@@ -1,0 +1,4 @@
+[[permission]]
+identifier = "automation"
+description = "Allows the check-in webview to report a completed automation flow."
+commands.allow = ["mark_checkin_done"]

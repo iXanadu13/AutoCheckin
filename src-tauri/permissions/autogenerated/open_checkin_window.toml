@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-open-checkin-window"
+description = "Enables the open_checkin_window command without any pre-configured scope."
+commands.allow = ["open_checkin_window"]
+
+[[permission]]
+identifier = "deny-open-checkin-window"
+description = "Denies the open_checkin_window command without any pre-configured scope."
+commands.deny = ["open_checkin_window"]

@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-mark-checkin-done"
+description = "Enables the mark_checkin_done command without any pre-configured scope."
+commands.allow = ["mark_checkin_done"]
+
+[[permission]]
+identifier = "deny-mark-checkin-done"
+description = "Denies the mark_checkin_done command without any pre-configured scope."
+commands.deny = ["mark_checkin_done"]

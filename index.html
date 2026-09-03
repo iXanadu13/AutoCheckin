@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AutoCheckin</title>
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero">
+        <div><p class="eyebrow">WINDOWS AUTOMATION</p><h1>AutoCheckin</h1><p class="subtitle">让每天的登录和打卡，在开机后自动完成。</p></div>
+        <div id="status-badge" class="status-badge pending">检查中</div>
+      </section>
+      <section class="card status-card"><div class="status-icon" id="status-icon">○</div><div class="status-copy"><span class="label">今日打卡状态</span><strong id="status-text">尚未确认</strong><small id="last-checkin">启动后会自动检查</small></div><button class="secondary-button" id="refresh-button">刷新状态</button></section>
+      <section class="card settings-card">
+        <div class="section-heading"><div><span class="label">自动化流程</span><h2>配置页面操作步骤</h2></div><span class="pill">本地保存</span></div>
+        <label class="field"><span>登录页面链接</span><input id="login-url" type="url" placeholder="https://example.com/login"/><small>点击执行后会打开一个独立浏览器页面，并按下面顺序执行。</small></label>
+        <label class="switch-row"><span><strong>开机自动启动</strong><small>登录 Windows 后在后台运行</small></span><input id="autostart" type="checkbox"/><span class="switch"></span></label>
+        <div class="steps-heading"><div><span class="label">步骤列表</span><small>支持 CSS、XPath、文本匹配和等待</small></div><button class="secondary-button" id="add-step-button">＋ 添加步骤</button></div>
+        <div id="steps" class="steps"></div>
+        <div class="actions"><button class="primary-button" id="run-button">打开页面并执行流程</button><button class="ghost-button" id="save-button">保存设置</button></div>
+        <p id="message" class="message"></p>
+        <details class="help"><summary>步骤格式说明</summary><p>填写用户名/密码选择“填写”；点击登录或打卡按钮选择“点击”；页面跳转后选择“等待”。XPath 示例：<code>//input[@name='username']</code>。</p></details>
+      </section>
+      <footer>AutoCheckin · 账号内容仅保存在本机设置文件中</footer>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
