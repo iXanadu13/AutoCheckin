@@ -303,9 +303,15 @@ pub fn run() {
             if let Some(window) = app.get_webview_window("main") {
                 let window_for_close = window.clone();
                 window.on_window_event(move |event| {
-                    if let WindowEvent::CloseRequested { api, .. } = event {
-                        api.prevent_close();
-                        let _ = window_for_close.hide();
+                    match event {
+                        WindowEvent::CloseRequested { api, .. } => {
+                            api.prevent_close();
+                            let _ = window_for_close.hide();
+                        }
+                        WindowEvent::Resized(size) if size.width == 0 && size.height == 0 => {
+                            let _ = window_for_close.hide();
+                        }
+                        _ => {}
                     }
                 });
             }

@@ -21,12 +21,7 @@
         "visible": true
       }
     ],
-    "security": { "csp": null },
-    "trayIcon": {
-      "iconPath": "icons/icon.png",
-      "iconAsTemplate": false,
-      "tooltip": "AutoCheckin"
-    }
+    "security": { "csp": null }
   },
   "bundle": {
     "active": true,
