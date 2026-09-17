@@ -17,7 +17,7 @@
         "title": "AutoCheckin",
         "width": 760,
         "height": 820,
-        "resizable": false,
+        "resizable": true,
         "visible": true
       }
     ],

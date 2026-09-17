@@ -303,9 +303,24 @@ footer {
     border-radius: 8px;
     padding: 0 10px;
     outline: none;
-    color: #e8edf7;
-    background: #10182d;
+    color: #f4f7ff;
+    background-color: #10182d;
     font: 12px inherit;
+}
+
+.step-row select {
+    appearance: none;
+    -webkit-appearance: none;
+    color-scheme: dark;
+    padding-right: 28px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='m1 1 5 5 5-5' fill='none' stroke='%23e8edf7' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 9px center;
+}
+
+.step-row select option {
+    color: #f4f7ff;
+    background: #243252;
 }
 
 .step-row select:focus,
